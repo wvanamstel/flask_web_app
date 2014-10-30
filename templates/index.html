@@ -25,38 +25,26 @@
     <div class="starter-template">
         <table class="table">
             <thead>
-              <tr>
-                <th>Event Name</th>
-              </tr>
+                <tr>
+                    <th>Event Name</th>
+                </tr>
             </thead>
-            {% for item in entries %}
-                {% if item < 3 %}
-                    <tr class='error'>
-                        <td> {{item}} <button class='glyphicon glyphicon-circle-arrow-down'></button> <p class='tog'>test</p></td>
-                    </tr>
-                {% elif item > 7 %}
-                    <tr class='info'>
-                        <td> {{item}} <button class='glyphicon glyphicon-circle-arrow-down'></button> <p class='tog'>test</p></td>
-                    </tr>
-                {% else %}
-                    <tr class='success'>
-                        <td> {{item}} <button class='glyphicon glyphicon-circle-arrow-down'></button> <p class='tog'>test</p></td>
-                    </tr>
-                {% endif %}
-            {% endfor%}
+            {% set features = 'dsfsdf' %}
+                                
+            {% if entries.predictions == 1%}
+                <tr class='error'>
+                    <td> Fraudster <button class='glyphicon glyphicon-circle-arrow-down'></button> <p class='tog'>print features</p></td>
+                </tr>
+            {% else %}
+                <tr class='success'>
+                    <td> Bona Fide <button class='glyphicon glyphicon-circle-arrow-down'></button> <p class='tog'></p></td>
+                </tr>
+            {% endif %}
         </table>
-        <!-- <h1></h1> -->
-<!--         <p class="important">
-            Welcome on my awesome homepage.
-        </p>
- -->
-    <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
     </div>
     <script>
         $( "button" ).click(function() {
             $( "p" ).toggle();
         });
     </script>
-
-
 {% endblock %}
